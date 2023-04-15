@@ -7,7 +7,7 @@ html, body{
     font-family: Aral, Helvetica, sans-serif;
     text-align: center;
     -webkit-tap-highlight-color: rgba(0,0,0,0);
-    background: #f8f9fa;
+    background: #0d4680;
 }
 main{
     position: relative;
@@ -55,7 +55,7 @@ button{
 
 hr{
     border: 0;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid #0d4680;
     margin-bottom: 20px;
     padding-top: 20px;
 }
@@ -67,8 +67,8 @@ label, button{
     display: inline-block;
     padding: 5px 7px;
     margin: 3px 1px;
-    border: 1px solid #ddd;
-    background: #e9ecef;
+    border: 1px solid #eee6e6;
+    background: #080808;
     font-size: 12px;
     line-height: 20px;
     vertical-align: middle;
