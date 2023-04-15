@@ -156,6 +156,18 @@
         }
         update();
     </script>
+    <audio id="audio" loop>
+        <source src="Music/song1.mp3" type="audio/mpeg">
+    </audio>
+    <script>
+        var songs = ['Music/song1.mp3', 'Music/song2.mp3', 'Music/song3.mp3'];
+        var audio = document.getElementById('audio');
+        audio.addEventListener('ended', function() {
+            var nextSong = songs[Math.floor(Math.random() * songs.length)];
+            audio.src = nextSong;
+            audio.play();
+        });
+    </script>
     <br>
     <div class="header">
         <img src="demo/spotlight.png" alt="Imagen Central">
