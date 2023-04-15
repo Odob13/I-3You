@@ -232,6 +232,9 @@
         });
 
         audio.addEventListener('play', () => {
+            var x = volume.value;
+            var volumeValue = Math.pow(x, 2);
+            audio.volume = volumeValue;
             songTitle.classList.add('marquee');
         });
 
@@ -244,6 +247,9 @@
             if (currentSongIndex >= songs.length) {
                 currentSongIndex = 0;
             }
+            var x = volume.value;
+            var volumeValue = Math.pow(x, 2);
+            audio.volume = volumeValue;
             audio.src = songs[currentSongIndex];
             audio.play();
         });
