@@ -208,15 +208,6 @@
         <source src="song1.mp3" type="audio/mpeg">
     </audio>
     <input type="range" id="volume" class="volume" min="0" max="1" step="0.01" value="1">
-    <script>
-        window.onload = function() {
-            var audio = document.getElementById('audio');
-            var volume = document.getElementById('volume');
-            volume.addEventListener('input', function() {
-                audio.volume = this.value;
-            });
-        }
-    </script>
     <br><br>
     <div>
         <div class="image" style="background-image:url(demo/gallery/Us.png)" onclick="showGallery(1)"></div>
@@ -280,18 +271,7 @@
             }*/];
 
             window.showGallery = function(index){
-                var songs = ['song1.mp3', 'song2.mp3', 'song3.mp3'];
-                var audio = document.getElementById('audio');
-                audio.volume = 0.5;
-                audio.play();
-                document.addEventListener('click', function() {
-                    audio.muted = false;
-                });
-                audio.addEventListener('ended', function() {
-                    var nextSong = songs[Math.floor(Math.random() * songs.length)];
-                    audio.src = nextSong;
-                    audio.play();
-                });
+
                 const control = to_array(document.getElementById("control").getElementsByTagName("input"));
                 const animation = to_array(document.getElementById("animation").getElementsByTagName("input"));
                 const modifier = document.getElementById("modifier").getElementsByTagName("input");
@@ -396,6 +376,21 @@
             }
 
         }());
+    </script>
+    <script>
+        var songs = ['song1.mp3', 'song2.mp3', 'song3.mp3'];
+        var audio = document.getElementById('audio');
+        var volume = document.getElementById('volume');
+        audio.volume = 0.5;
+        audio.play();
+        audio.addEventListener('ended', function() {
+            var nextSong = songs[Math.floor(Math.random() * songs.length)];
+            audio.src = nextSong;
+            audio.play();
+        });
+        volume.addEventListener('input', function() {
+            audio.volume = this.value;
+        });
     </script>
 </body>
 </html>
