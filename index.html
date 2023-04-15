@@ -59,7 +59,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="description" content="Una pagina pa mi amorsito">
     <meta name="keywords" content="Teamo Preciosa">
-    <meta name="thumbnail" content="https://nextapps-de.github.io/spotlight/demo/favicon.png">
+    <meta name="thumbnail" content="demo/heart.png">
 </head>
 <body>
     <div id="overlay"></div>
@@ -145,10 +145,10 @@
         var nextButton = document.getElementById('nextButton');
         var volume = document.getElementById('volume');
         var isPlaying = false;
-        const songTitle = document.querySelector('#song-title');
+        var songTitle = document.querySelector('#song-title');
         // Obtener el nombre del archivo de audio
-        const audioSrc = audio.querySelector('source').src;
-        let audioFileName = audioSrc.substring(audioSrc.lastIndexOf('/') + 1);
+        var audioSrc = audio.querySelector('source').src;
+        var audioFileName = audioSrc.substring(audioSrc.lastIndexOf('/') + 1);
 
         // Reemplazar caracteres no deseados con un espacio en blanco
         audioFileName = decodeURIComponent(audioFileName);
@@ -165,8 +165,8 @@
             audio.src = songs[currentSongIndex];
             audio.play();
             // Obtener el nombre del archivo de audio
-            const audioSrc = audio.querySelector('source').src;
-            let audioFileName = audioSrc.substring(audioSrc.lastIndexOf('/') + 1);
+            var audioSrc = audio.querySelector('source').src;
+            var audioFileName = audioSrc.substring(audioSrc.lastIndexOf('/') + 1);
 
             // Reemplazar caracteres no deseados con un espacio en blanco
             audioFileName = decodeURIComponent(audioFileName);
@@ -205,8 +205,8 @@
             audio.src = songs[currentSongIndex];
             audio.play();
             // Obtener el nombre del archivo de audio
-            const audioSrc = audio.querySelector('source').src;
-            let audioFileName = audioSrc.substring(audioSrc.lastIndexOf('/') + 1);
+            var audioSrc = audio.querySelector('source').src;
+            var audioFileName = audioSrc.substring(audioSrc.lastIndexOf('/') + 1);
 
             // Reemplazar caracteres no deseados con un espacio en blanco
             audioFileName = decodeURIComponent(audioFileName);
