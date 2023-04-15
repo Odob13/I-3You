@@ -1,4 +1,4 @@
-import * as THREE from './Scripts/three.min.js';
+import * as THREE from './Scripts/three.module.js';
 import { OrbitControls } from './Scripts/OrbitControls.js';
 
 // Select the container for the scene
