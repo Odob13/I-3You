@@ -105,19 +105,6 @@
         }
         setInterval(addShootingStar, 2000);
 
-        function drawHeart() {
-            var x = Math.random() * canvas.width;
-            var y = Math.random() * canvas.height;
-            ctx.beginPath();
-            ctx.fillStyle = 'pink';
-            ctx.moveTo(x, y);
-            ctx.bezierCurveTo(x + 5, y + 5, x + 20, y, x, y - 30);
-            ctx.bezierCurveTo(x - 20, y, x - 5, y + 5, x, y);
-            ctx.fill();
-        }
-
-        setInterval(drawHeart, Math.random() * 3000);
-
         function update() {
             ctx.fillStyle = "#000";
             ctx.fillRect(0, 0, canvas.width, canvas.height);
@@ -147,8 +134,12 @@
                 var shootingStar = shootingStars[i];
                 ctx.beginPath();
                 ctx.moveTo(shootingStar.x - shootingStar.length, shootingStar.y);
-                ctx.lineTo(shootingStar.x, shootingStar.y);
-                ctx.closePath();
+                ctx.quadraticCurveTo(
+                    shootingStar.x - shootingStar.length / 2,
+                    shootingStar.y - shootingStar.length / 2,
+                    shootingStar.x,
+                    shootingStar.y
+                );
                 ctx.strokeStyle = "rgba(255, 255, 255, " + shootingStar.alpha + ")";
                 ctx.stroke();
 
@@ -160,8 +151,6 @@
                     shootingStars.splice(i, 1);
                 }
             }
-
-            drawHeart();
 
             requestAnimationFrame(update);
         }
@@ -221,6 +210,14 @@
         <div class="image" style="background-image:url(demo/gallery/sea-1975403-thumb.jpg)" onclick="showGallery(2)"></div>
         <div class="image" style="background-image:url(demo/gallery/newport-beach-2089906-thumb.jpg)" onclick="showGallery(3)"></div>
     </div>
+    <script>
+        var img = document.querySelector('image');
+        img.addEventListener('mousemove', function(e) {
+            var x = e.clientX - img.offsetLeft;
+            var y = e.clientY - img.offsetTop;
+            img.style.transform = 'translate(' + x / 10 + 'px, ' + y / 10 + 'px)';
+        });
+    </script>
     <br><br>
     <script>
 

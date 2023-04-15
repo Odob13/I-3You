@@ -57,6 +57,12 @@ button{
     background-repeat: no-repeat;
     background-size: cover;
 }
+.image:hover {
+    transform: scale(1.1);
+}
+.spotlight img:hover {
+    transform: scale(1.1);
+}
 .spotlight img{
     height: 40vw;
     max-height: 400px;
