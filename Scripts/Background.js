@@ -17,7 +17,7 @@ const loader = new THREE.TextureLoader();
 const texture = loader.load('demo/Background.jpg');
 
 // Create a spherical geometry and map the texture to it
-const geometry = new THREE.SphereGeometry(500, 60, 40);
+const geometry = new THREE.SphereGeometry(500, 64, 64);
 
 // Flip the geometry inside out
 geometry.scale(-1, 1, 1);
