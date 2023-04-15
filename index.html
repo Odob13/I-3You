@@ -126,7 +126,7 @@
         Le pudes dar al play mi amor? :3
     </div>
     <br>
-    <input type="range" id="volume" class="volume" min="0" max="100" step="1" value="50">
+    <input type="range" id="volume" class="volume" min="0" max="1" step="0.01" value="0.5">
     <script>
         var songs = ['Music/song1.mp3', 'Music/song2.mp3', 'Music/song3.mp3'];
         var currentSongIndex = 0;
@@ -177,8 +177,9 @@
         });
     
         volume.addEventListener('input', function() {
-            console.log(20 * Math.log10(this.value + 0.001));
-            audio.volume = 20 * Math.log10(this.value + 0.001);
+            const x = volume.value;
+            const volumeValue = Math.pow(x, 2);
+            audio.volume = volumeValue;
         });
 
         audio.addEventListener('ended', function() {
