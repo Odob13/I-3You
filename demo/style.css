@@ -36,16 +36,22 @@ html, body{
     z-index: -1;
 }
 .marquee {
-    position: relative;
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.marquee span {
+    display: inline-block;
     animation: marquee 10s linear infinite;
 }
 
 @keyframes marquee {
     0% {
-        transform: translateX(100%) rotate(0deg);
+        transform: translateX(0);
     }
     100% {
-        transform: translateX(-100%) rotate(360deg);
+        transform: translateX(-100%);
     }
 }
 #content {

@@ -145,9 +145,14 @@
         var volume = document.getElementById('volume');
         var isPlaying = false;
         const songTitle = document.querySelector('#song-title');
+        // Obtener el nombre del archivo de audio
         const audioSrc = audio.querySelector('source').src;
-        const audioFileName = audioSrc.substring(audioSrc.lastIndexOf('/') + 1);
+        let audioFileName = audioSrc.substring(audioSrc.lastIndexOf('/') + 1);
 
+        // Reemplazar caracteres no deseados con un espacio en blanco
+        audioFileName = audioFileName.replace(/[^a-zA-Z0-9\s]/g, ' ');
+
+        // Mostrar el nombre del archivo de audio como el título de la canción
         songTitle.textContent = audioFileName;
     
         prevButton.addEventListener('click', function() {
