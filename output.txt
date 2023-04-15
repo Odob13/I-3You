@@ -5,506 +5,506 @@
     like: false
 },
 {
-    title: "",
-    description: "",
+    title: "Nuestro besito de lengua jiji",
+    description: "Bien rico nunca lo olvidare <3 :3",
     src: "demo/gallery/IMG-20230415-WA0001.jpg",
     like: false
 },
 {
-    title: "",
-    description: "",
+    title: "Calibrando la tomada de fotos fasdjasdfj",
+    description: "Miamorsito toda sexy en su vestido <3",
     src: "demo/gallery/IMG-20230415-WA0002.jpg",
     like: false
 },
 {
-    title: "",
-    description: "",
+    title: "Yo a usted la amo",
+    description: "Efectivamente yo a ute la amo priciosa <3",
     src: "demo/gallery/IMG-20230415-WA0003.jpg",
     like: false
 },
 {
-    title: "",
-    description: "",
+    title: "Luego de una cogidota jiji",
+    description: "Bien piciosa miamor sinada jiji",
     src: "demo/gallery/IMG-20230415-WA0004.jpg",
     like: false
 },
 {
-    title: "",
-    description: "",
+    title: "TE",
+    description: "AMO",
     src: "demo/gallery/IMG-20230415-WA0005.jpg",
     like: false
 },
 {
-    title: "",
-    description: "",
+    title: "ESA SONRISITAAAAAAA",
+    description: "ME ENCANTAAAAAAA",
     src: "demo/gallery/IMG-20230415-WA0006.jpg",
     like: false
 },
 {
-    title: "",
-    description: "",
+    title: "BESHITO",
+    description: "MUA",
     src: "demo/gallery/IMG-20230415-WA0007.jpg",
     like: false
 },
 {
-    title: "",
-    description: "",
+    title: "TODA HERMOSA PORDIOS",
+    description: "MI VIDA LINDAAAAAA",
     src: "demo/gallery/IMG-20230415-WA0008.jpg",
     like: false
 },
 {
-    title: "",
-    description: "",
+    title: "Bien trabajadores en navidad jiji",
+    description: "No sabes lo mucho que te amo",
     src: "demo/gallery/IMG-20230415-WA0009.jpg",
     like: false
 },
 {
-    title: "",
-    description: "",
+    title: "Amo tu carita hermosa",
+    description: "Despierto cada dia pensando en ti",
     src: "demo/gallery/IMG-20230415-WA0010.jpg",
     like: false
 },
 {
-    title: "",
-    description: "",
+    title: "Me haces muy feliz",
+    description: "Me haces sonreir",
     src: "demo/gallery/IMG-20230415-WA0011.jpg",
     like: false
 },
 {
-    title: "",
-    description: "",
+    title: "Quiero amarte",
+    description: "Quiero besarte",
     src: "demo/gallery/IMG-20230415-WA0012.jpg",
     like: false
 },
 {
-    title: "",
-    description: "",
+    title: "Quiero tocarte",
+    description: "Quiero ayudarte",
     src: "demo/gallery/IMG-20230415-WA0013.jpg",
     like: false
 },
 {
-    title: "",
-    description: "",
+    title: "Me ayudas siempre",
+    description: "Siempre estas ahi",
     src: "demo/gallery/IMG-20230415-WA0014.jpg",
     like: false
 },
 {
-    title: "",
-    description: "",
+    title: "Contigo nada me falta",
+    description: "Contigo puedo sonreir",
     src: "demo/gallery/IMG-20230415-WA0015.jpg",
     like: false
 },
 {
-    title: "",
-    description: "",
+    title: "Desde que te vi",
+    description: "Mi corazonsito se acelero",
     src: "demo/gallery/IMG-20230415-WA0016.jpg",
     like: false
 },
 {
-    title: "",
-    description: "",
+    title: "Nunca pense que me harias caso :C",
+    description: "Pero ahora no vamo a casar jiji",
     src: "demo/gallery/IMG-20230415-WA0017.jpg",
     like: false
 },
 {
-    title: "",
-    description: "",
+    title: "Eres hermosa",
+    description: "Eres preciosa",
     src: "demo/gallery/IMG-20230415-WA0018.jpg",
     like: false
 },
 {
-    title: "",
-    description: "",
+    title: "Amo quererte",
+    description: Amo tenerte",
     src: "demo/gallery/IMG-20230415-WA0019.jpg",
     like: false
 },
 {
-    title: "",
-    description: "",
+    title: "TE",
+    description: "TE",
     src: "demo/gallery/IMG-20230415-WA0020.jpg",
     like: false
 },
 {
-    title: "",
-    description: "",
+    title: "AMO",
+    description: "AMO",
     src: "demo/gallery/IMG-20230415-WA0021.jpg",
     like: false
 },
 {
-    title: "",
-    description: "",
+    title: "MI AMOR",
+    description: "MI VIDA",
     src: "demo/gallery/IMG-20230415-WA0022.jpg",
     like: false
 },
 {
-    title: "",
-    description: "",
+    title: "MI REINA",
+    description: "MI TODO",
     src: "demo/gallery/IMG-20230415-WA0023.jpg",
     like: false
 },
 {
-    title: "",
-    description: "",
+    title: "MI BEBEEE",
+    description: "MI PICIOSA",
     src: "demo/gallery/IMG-20230415-WA0024.jpg",
     like: false
 },
 {
-    title: "",
-    description: "",
+    title: "GRACIAS POR EXISTIR",
+    description: "GRACIASSSSSSSSSSS MIAMOOOOOOOOOOR",
     src: "demo/gallery/IMG-20230415-WA0025.jpg",
     like: false
 },
 {
-    title: "",
-    description: "",
+    title: "Presumiendo a miamorsito",
+    description: "En miestado pa que todos vean a mi reina",
     src: "demo/gallery/IMG-20230415-WA0026.jpg",
     like: false
 },
 {
-    title: "",
-    description: "",
+    title: "Amo",
+    description: "Mirarte",
     src: "demo/gallery/IMG-20230415-WA0027.jpg",
     like: false
 },
 {
-    title: "",
-    description: "",
+    title: "MY QUEEN",
+    description: "Mi reina <3",
     src: "demo/gallery/IMG-20230415-WA0028.jpg",
     like: false
 },
 {
-    title: "",
-    description: "",
+    title: "Tu carita bella",
+    description: "hermosa",
     src: "demo/gallery/IMG-20230415-WA0029.jpg",
     like: false
 },
 {
-    title: "",
-    description: "",
+    title: "Preciosa",
+    description: "Mi niña",
     src: "demo/gallery/IMG-20230415-WA0030.jpg",
     like: false
 },
 {
-    title: "",
-    description: "",
+    title: "Amo",
+    description: "Tocarte",
     src: "demo/gallery/IMG-20230415-WA0031.jpg",
     like: false
 },
 {
-    title: "",
-    description: "",
+    title: "Amo",
+    description: "Escucharte",
     src: "demo/gallery/IMG-20230415-WA0032.jpg",
     like: false
 },
 {
-    title: "",
-    description: "",
+    title: "Badie",
+    description: "Cuidadito con ser badie JASDFJAJ teamo",
     src: "demo/gallery/IMG-20230415-WA0033.jpg",
     like: false
 },
 {
-    title: "",
-    description: "",
+    title: "Amo",
+    description: "Todo de ti",
     src: "demo/gallery/IMG-20230415-WA0034.jpg",
     like: false
 },
 {
-    title: "",
-    description: "",
+    title: "Eres sensible",
+    description: "Amable",
     src: "demo/gallery/IMG-20230415-WA0035.jpg",
     like: false
 },
 {
-    title: "",
-    description: "",
+    title: "Divertida",
+    description: "Agradable",
     src: "demo/gallery/IMG-20230415-WA0036.jpg",
     like: false
 },
 {
-    title: "",
-    description: "",
+    title: "Risueña",
+    description: "Amorosa",
     src: "demo/gallery/IMG-20230415-WA0037.jpg",
     like: false
 },
 {
-    title: "",
-    description: "",
+    title: "Joder Que sexy osi osi",
+    description: "Toda despeina miamor",
     src: "demo/gallery/IMG-20230415-WA0038.jpg",
     like: false
 },
 {
-    title: "",
-    description: "",
+    title: "Cariñosa",
+    description: "Preciosa",
     src: "demo/gallery/IMG-20230415-WA0039.jpg",
     like: false
 },
 {
-    title: "",
-    description: "",
+    title: "Increible",
+    description: "Empatica",
     src: "demo/gallery/IMG-20230415-WA0040.jpg",
     like: false
 },
 {
-    title: "",
-    description: "",
+    title: "Agradable",
+    description: "Perfecta",
     src: "demo/gallery/IMG-20230415-WA0041.jpg",
     like: false
 },
 {
-    title: "",
-    description: "",
+    title: "Amo como hablamos",
+    description: "Como nos tratamos",
     src: "demo/gallery/IMG-20230415-WA0042.jpg",
     like: false
 },
 {
-    title: "",
-    description: "",
+    title: "Amo tus ojos",
+    description: "Amo tu boca",
     src: "demo/gallery/IMG-20230415-WA0043.jpg",
     like: false
 },
 {
-    title: "",
-    description: "",
+    title: "Amo tu ser",
+    description: "Amo tu alma",
     src: "demo/gallery/IMG-20230415-WA0044.jpg",
     like: false
 },
 {
-    title: "",
-    description: "",
+    title: "Amo tus labios",
+    description: "Amo tus otros labios jiji",
     src: "demo/gallery/IMG-20230415-WA0045.jpg",
     like: false
 },
 {
-    title: "",
-    description: "",
+    title: "Cuando estamos juntos",
+    description: "La vida no estan mala",
     src: "demo/gallery/IMG-20230415-WA0046.jpg",
     like: false
 },
 {
-    title: "",
-    description: "",
+    title: "Porque te tengo",
+    description: "Se que puedo seguir",
     src: "demo/gallery/IMG-20230415-WA0047.jpg",
     like: false
 },
 {
-    title: "",
-    description: "",
+    title: "Por que te veo",
+    description: "Se que quiero vivir",
     src: "demo/gallery/IMG-20230415-WA0048.jpg",
     like: false
 },
 {
-    title: "",
-    description: "",
+    title: "Mi loquita linda JIJI",
+    description: "Con esa carita de Diosa",
     src: "demo/gallery/IMG-20230415-WA0049.jpg",
     like: false
 },
 {
-    title: "",
-    description: "",
+    title: "JSJSJS ESACARAMENAMORAAAAAAAA JIJI",
+    description: "TEAMOOOOOOOOOOO",
     src: "demo/gallery/IMG-20230415-WA0050.jpg",
     like: false
 },
 {
-    title: "",
-    description: "",
+    title: "Por que te anelo, se que quiero estar contigo",
+    description: "Por que se que eres todo lo que deseo",
     src: "demo/gallery/IMG-20230415-WA0051.jpg",
     like: false
 },
 {
-    title: "",
-    description: "",
+    title: "Aqui besandonos con el mordor atras y pinto arriba xD",
+    description: "chismosos",
     src: "demo/gallery/IMG-20230415-WA0052.jpg",
     like: false
 },
 {
-    title: "",
-    description: "",
+    title: "Si no eres tu no quiero",
+    description: "Si no eres tu no quiero nada",
     src: "demo/gallery/IMG-20230415-WA0053.jpg",
     like: false
 },
 {
-    title: "",
-    description: "",
+    title: "Tu carita sensual jiji<3",
+    description: "Ricaaaaaaaaaaaa",
     src: "demo/gallery/IMG-20230415-WA0054.jpg",
     like: false
 },
 {
-    title: "",
-    description: "",
+    title: "Si eres feliz yo tambien lo soy",
+    description: "Si sonries yo tambien lo hago",
     src: "demo/gallery/IMG-20230415-WA0055.jpg",
     like: false
 },
 {
-    title: "",
-    description: "",
+    title: "Solo quiero pasar el resto de mi vida contigo",
+    description: "Casarnos",
     src: "demo/gallery/IMG-20230415-WA0056.jpg",
     like: false
 },
 {
-    title: "",
-    description: "",
+    title: "Amarnos y ser felices",
+    description: "Llegar a biejitos",
     src: "demo/gallery/IMG-20230415-WA0057.jpg",
     like: false
 },
 {
-    title: "",
-    description: "",
+    title: "Miamor con nuestros hijitos",
+    description: "Toda linda haciendose la mimia",
     src: "demo/gallery/IMG-20230415-WA0058.jpg",
     like: false
 },
 {
-    title: "",
-    description: "",
+    title: "Hacer una familia",
+    description: "Shi asi lo quieres miamor",
     src: "demo/gallery/IMG-20230415-WA0059.jpg",
     like: false
 },
 {
-    title: "",
-    description: "",
+    title: "Te dare todo ",
+    description: "Te dare mi ser",
     src: "demo/gallery/IMG-20230415-WA0060.jpg",
     like: false
 },
 {
-    title: "",
-    description: "",
+    title: "Soy tuyo",
+    description: "y tu eres mia",
     src: "demo/gallery/IMG-20230415-WA0061.jpg",
     like: false
 },
 {
-    title: "",
-    description: "",
+    title: "Te amo",
+    description: "te amo",
     src: "demo/gallery/IMG-20230415-WA0062.jpg",
     like: false
 },
 {
-    title: "",
-    description: "",
+    title: "Las palabras son tan limitantes",
+    description: "Que lo que siento por ti no se puede expresar",
     src: "demo/gallery/IMG-20230415-WA0063.jpg",
     like: false
 },
 {
-    title: "",
-    description: "",
+    title: "Solo quiero amarte",
+    description: "y que me ames",
     src: "demo/gallery/IMG-20230415-WA0064.jpg",
     like: false
 },
 {
-    title: "",
-    description: "",
+    title: "Bien pura mi monjita",
+    description: "Te como toda jiji",
     src: "demo/gallery/IMG-20230415-WA0065.jpg",
     like: false
 },
 {
-    title: "",
-    description: "",
+    title: "Te amo mas que a todo",
+    description: "Eres mivida",
     src: "demo/gallery/IMG-20230415-WA0066.jpg",
     like: false
 },
 {
-    title: "",
-    description: "",
+    title: "Mi razon de ser",
+    description: "De esforzarme por ser mejor",
     src: "demo/gallery/IMG-20230415-WA0067.jpg",
     like: false
 },
 {
-    title: "",
-    description: "",
+    title: "Bien borrachos y drogaos",
+    description: "Besandonos bienrico jiji",
     src: "demo/gallery/IMG-20230415-WA0068.jpg",
     like: false
 },
 {
-    title: "",
-    description: "",
+    title: "Mi monjita bella",
+    description: "Toda pura jiji :D",
     src: "demo/gallery/IMG-20230415-WA0069.jpg",
     like: false
 },
 {
-    title: "",
-    description: "",
+    title: "De salir adelante",
+    description: "Juntos ",
     src: "demo/gallery/IMG-20230415-WA0070.jpg",
     like: false
 },
 {
-    title: "",
-    description: "",
+    title: "De ir a la playa",
+    description: "Juntos",
     src: "demo/gallery/IMG-20230415-WA0071.jpg",
     like: false
 },
 {
-    title: "",
-    description: "",
+    title: "De viajar",
+    description: "Juntos",
     src: "demo/gallery/IMG-20230415-WA0072.jpg",
     like: false
 },
 {
-    title: "",
-    description: "",
+    title: "De amarnos",
+    description: "Querernos",
     src: "demo/gallery/IMG-20230415-WA0073.jpg",
     like: false
 },
 {
-    title: "",
-    description: "",
+    title: "Amo besarte",
+    description: "Amo abrazarte",
     src: "demo/gallery/IMG-20230415-WA0074.jpg",
     like: false
 },
 {
-    title: "",
-    description: "",
+    title: "Apoyarnos",
+    description: "Ayudarnos",
     src: "demo/gallery/IMG-20230415-WA0075.jpg",
     like: false
 },
 {
-    title: "",
-    description: "",
+    title: "Crecer",
+    description: "Juntos",
     src: "demo/gallery/IMG-20230415-WA0076.jpg",
     like: false
 },
 {
-    title: "",
-    description: "",
+    title: "Mi amorsito siempre cuidandome en mi fondo de pantalla",
+    description: "Su carita toda bella jiji<3",
     src: "demo/gallery/IMG-20230415-WA0077.jpg",
     like: false
 },
 {
-    title: "",
-    description: "",
+    title: "Tu eres mi hogar",
+    description: "teamo",
     src: "demo/gallery/IMG-20230415-WA0078.jpg",
     like: false
 },
 {
-    title: "",
-    description: "",
+    title: "Eres mi familia",
+    description: "TEAMOOOOOOOOO",
     src: "demo/gallery/IMG-20230415-WA0079.jpg",
     like: false
 },
 {
-    title: "",
-    description: "",
+    title: "Tu toda bella con tu corazonsito",
+    description: "Bien echo y bonito",
     src: "demo/gallery/IMG-20230415-WA0080.jpg",
     like: false
 },
 {
-    title: "",
-    description: "",
+    title: "Yo todo meco con el corazon del mismo lao",
+    description: "me apendejo cuando te veo asjdfjafsd <3",
     src: "demo/gallery/IMG-20230415-WA0081.jpg",
     like: false
 },
 {
-    title: "",
-    description: "",
+    title: "Otravez yo todo meco",
+    description: "Tiamo asi este bien pendeju",
     src: "demo/gallery/IMG-20230415-WA0082.jpg",
     like: false
 },
 {
-    title: "",
-    description: "",
+    title: "Eres mi sol,Eres mi luz",
+    description: "T E  A M O",
     src: "demo/gallery/IMG-20230415-WA0083.jpg",
     like: false
 },
 {
-    title: "",
-    description: "",
+    title: "Nuestra ultima fotito",
+    description: "Te amo mi vida Gracias por ser lo mejor de mi existencia, quiero seguir tomandonos fotitos y guardando estos recuerdos que me hacen feliz <3",
     src: "demo/gallery/IMG-20230415-WA0084.jpg",
     like: false
 }

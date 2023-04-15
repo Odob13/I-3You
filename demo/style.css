@@ -177,6 +177,11 @@ pre code.hljs{
     max-width: calc(100vw - 1.7em);
 }
 
+.transparent-background {
+    background-color: transparent;
+    color: black;
+}
+
 a[data-media="node"]{
     width: 29vw;
     max-width: 300px;

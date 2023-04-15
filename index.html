@@ -62,92 +62,6 @@
 </head>
 <body>
     <div id="container"></div>
-    <!-- <canvas id="canvas"></canvas>
-    <script>    
-        var canvas = document.getElementById('canvas');
-        var ctx = canvas.getContext('2d');
-
-        function resize() {
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
-        }
-        window.addEventListener('resize', resize);
-        resize();
-
-        var stars = [];
-        for (var i = 0; i < 1000; i++) {
-            stars.push({
-                x: Math.random() * canvas.width,
-                y: Math.random() * canvas.height,
-                radius: Math.sqrt(Math.random() * 2),
-                alpha: Math.random(),
-                decreasing: true
-            });
-        }
-
-        var shootingStars = [];
-        function addShootingStar() {
-            shootingStars.push({
-                x: Math.random() * canvas.width,
-                y: 0,
-                length: 8,
-                speed: Math.random() * 10 + 10,
-                alpha: 1
-            });
-        }
-        setInterval(addShootingStar, 2000);
-
-        function update() {
-            ctx.fillStyle = "#000";
-            ctx.fillRect(0, 0, canvas.width, canvas.height);
-
-            for (var i = 0; i < stars.length; i++) {
-                var star = stars[i];
-                ctx.beginPath();
-                ctx.arc(star.x, star.y, star.radius, 0, 2 * Math.PI);
-                ctx.closePath();
-                ctx.fillStyle = "rgba(255, 255, 255, " + star.alpha + ")";
-                ctx.fill();
-
-                if (star.decreasing) {
-                    star.alpha -= 0.005;
-                    if (star.alpha < 0.2) {
-                        star.decreasing = false;
-                    }
-                } else {
-                    star.alpha += 0.005;
-                    if (star.alpha > 0.9) {
-                        star.decreasing = true;
-                    }
-                }
-            }
-
-            for (var i = shootingStars.length - 1; i >= 0; i--) {
-                var shootingStar = shootingStars[i];
-                ctx.beginPath();
-                ctx.moveTo(shootingStar.x - shootingStar.length, shootingStar.y);
-                ctx.quadraticCurveTo(
-                    shootingStar.x - shootingStar.length / 2,
-                    shootingStar.y - shootingStar.length / 2,
-                    shootingStar.x,
-                    shootingStar.y
-                );
-                ctx.strokeStyle = "rgba(255, 255, 255, " + shootingStar.alpha + ")";
-                ctx.stroke();
-
-                shootingStar.x += shootingStar.speed;
-                shootingStar.y += shootingStar.speed;
-                shootingStar.alpha -= 0.01;
-
-                if (shootingStar.x > canvas.width || shootingStar.y > canvas.height) {
-                    shootingStars.splice(i, 1);
-                }
-            }
-
-            requestAnimationFrame(update);
-        }
-        update();
-    </script> -->
     <br>
     <div class="header">
         <img src="demo/spotlight.png" alt="Imagen Central">
@@ -207,6 +121,10 @@
         </svg>
     </button>
     <br>
+    <div class="transparent-background">
+        Le pudes dar al play mi amor? :3
+    </div>
+    <br>
     <input type="range" id="volume" class="volume" min="0" max="1" step="0.01" value="1">
     <script>
         var songs = ['Music/song1.mp3', 'Music/song2.mp3', 'Music/song3.mp3'];
@@ -258,7 +176,9 @@
         });
     
         volume.addEventListener('input', function() {
-            audio.volume = this.value;
+            const x = volume.value;
+            const volumef = 20 * Math.log10(x);
+            audio.volume = volumef;
         });
 
         audio.addEventListener('ended', function() {
@@ -274,7 +194,7 @@
     <div>
         <div class="image" style="background-image:url(demo/gallery/Us.png)" onclick="showGallery(1)"></div>
         <div class="image" style="background-image:url(demo/gallery/IMG-20230415-WA0001.jpg)" onclick="showGallery(2)"></div>
-        <div class="image" style="background-image:url(demo/gallery/IMG-20230415-WA0002.jpg)" onclick="showGallery(3)"></div>
+        <div class="image" style="background-image:url(demo/gallery/IMG-20230415-WA0006.jpg)" onclick="showGallery(3)"></div>
     </div>
     <script>
         window.onload = function() {
@@ -300,30 +220,7 @@
 
         (function(){
 
-            var gallery = [/*{
-                title: "La Foto de perfil de mi amosito jiji",
-                description: "La goserita solo se la puso un tiempo despues de ser nobios, pero aun asi amo que la tengaaaa pa que los mosos sepan que es mia :3 <3",
-                src: "demo/gallery/Us.png",
-                like: false
-            },{
-                title: "At vero eos et accusam",
-                description: "Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.",
-                src: "demo/gallery/sea-1975403.jpg",
-                like: false,
-            },{
-                title: "Duis autem vel eum iriure dolor",
-                description: "In hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim.",
-                src: "demo/gallery/newport-beach-2089906.jpg",
-                like: false
-            },{
-                media: "node",
-                control: "next,prev,close",
-                src: (function(){
-                    const iframe = document.createElement("iframe");
-                    iframe.src = "https://www.youtube.com/embed/tgbNymZ7vqY";
-                    return iframe;
-                }())
-            }*/];
+            var gallery = [];
 
             fetch('output.txt')
                 .then(response => response.text())
