@@ -130,10 +130,10 @@
         var songs = ['Music/song1.mp3', 'Music/song2.mp3', 'Music/song3.mp3'];
         var currentSongIndex = 0;
         var audio = document.getElementById('audio');
+        const volume = document.getElementById('volume');
         var prevButton = document.getElementById('prevButton');
         var playButton = document.getElementById('playButton');
         var nextButton = document.getElementById('nextButton');
-        var volume = document.getElementById('volume');
         var isPlaying = false;
     
         prevButton.addEventListener('click', function() {
@@ -177,8 +177,8 @@
     
         volume.addEventListener('input', function() {
             const x = volume.value;
-            const volumef = 20 * Math.log10(x);
-            audio.volume = volumef;
+            const volumeValue = 20 * Math.log10(x);
+            audio.volume = volumeValue;
         });
 
         audio.addEventListener('ended', function() {
