@@ -41,6 +41,8 @@ html, body{
 
 .marquee {
     display: flex;
+    justify-content: center;
+    align-items: center;
     animation: marquee 10s linear infinite;
 }
 

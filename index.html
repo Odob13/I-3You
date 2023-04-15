@@ -162,8 +162,8 @@
         audioFileName = audioFileName.replace(/[^a-zA-Z0-9\s]/g, ' ');
 
         // Mostrar el nombre del archivo de audio como el título de la canción
-        songTitle1.textContent = audioFileName;
-        songTitle2.textContent = audioFileName;
+        songTitle1.textContent = audioFileName + '    ';
+        songTitle2.textContent = audioFileName + '    ';
     
         prevButton.addEventListener('click', function() {
             currentSongIndex--;
