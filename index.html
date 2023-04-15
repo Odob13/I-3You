@@ -177,8 +177,8 @@
         });
     
         volume.addEventListener('input', function() {
-            console.log(20 * Math.log10(this.value + 0.001));
-            audio.volume = 20 * Math.log10(this.value + 0.001);
+            console.log(1 * Math.log10(this.value + 0.001));
+            audio.volume = 1 * Math.log10(this.value + 0.001);
         });
 
         audio.addEventListener('ended', function() {
