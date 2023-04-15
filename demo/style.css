@@ -35,20 +35,19 @@ html, body{
     height: 100%;
     z-index: -1;
 }
-.marquee {
-    display: inline-block;
-    white-space: nowrap;
+.marquee-container {
     overflow: hidden;
 }
 
-.marquee span {
+.marquee {
     display: inline-block;
+    white-space: nowrap;
     animation: marquee 10s linear infinite;
 }
 
 @keyframes marquee {
     0% {
-        transform: translateX(0);
+        transform: translateX(100%);
     }
     100% {
         transform: translateX(-100%);
