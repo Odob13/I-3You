@@ -155,7 +155,6 @@
         // Reemplazar caracteres no deseados con un espacio en blanco
         audioFileName = decodeURIComponent(audioFileName);
         audioFileName = audioFileName.replace('.mp3', '');
-        audioFileName = audioFileName.replace(/[^a-zA-Z0-9\s]/g, ' ');
 
         // Mostrar el nombre del archivo de audio como el título de la canción
         songTitle.textContent = audioFileName;
