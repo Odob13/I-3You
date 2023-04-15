@@ -174,7 +174,7 @@
         <label><input type="radio" name="autohide" value="false" checked>Autohide: Off</label>
         <label><input type="radio" name="autohide" value="true" checked>Autohide: Controls</label>
         <label><input type="radio" name="autohide" value="all">Autohide: All</label><br>
-        <label><input type="radio" name="fit" value="cover" checked>Autofit: Cover</label>
+        <label><input type="radio" name="fit" value="cover">Autofit: Cover</label>
         <label><input type="radio" name="fit" value="contain">Autofit: Contain</label><br>
         <label><input type="radio" name="theme" value="" checked>Theme: default</label>
         <label><input type="radio" name="theme" value="white">Theme: white</label>
@@ -185,7 +185,7 @@
         <label><input type="checkbox" value="scale" checked>Scale</label>
         <label><input type="checkbox" value="custom" checked>Custom</label>
     </div>
-    <audio id="audio" loop>
+    <audio id="audio">
         <source src="Music/song1.mp3" type="audio/mpeg">
     </audio>
     <button id="prevButton" style="background-color: transparent; border: none;">
@@ -273,8 +273,8 @@
     <br><br>
     <div>
         <div class="image" style="background-image:url(demo/gallery/Us.png)" onclick="showGallery(1)"></div>
-        <div class="image" style="background-image:url(demo/gallery/sea-1975403-thumb.jpg)" onclick="showGallery(2)"></div>
-        <div class="image" style="background-image:url(demo/gallery/newport-beach-2089906-thumb.jpg)" onclick="showGallery(3)"></div>
+        <div class="image" style="background-image:url(demo/gallery/IMG-20230415-WA0001.jpg)" onclick="showGallery(2)"></div>
+        <div class="image" style="background-image:url(demo/gallery/IMG-20230415-WA0002.jpg)" onclick="showGallery(3)"></div>
     </div>
     <script>
         window.onload = function() {
@@ -300,29 +300,22 @@
 
         (function(){
 
-            const gallery = [{
-
+            var gallery = [/*{
                 title: "La Foto de perfil de mi amosito jiji",
                 description: "La goserita solo se la puso un tiempo despues de ser nobios, pero aun asi amo que la tengaaaa pa que los mosos sepan que es mia :3 <3",
                 src: "demo/gallery/Us.png",
-                button: "Download Image",
-                onclick: Spotlight.download,
                 like: false
             },{
                 title: "At vero eos et accusam",
                 description: "Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.",
                 src: "demo/gallery/sea-1975403.jpg",
-                button: "Next Slide",
-                onclick: Spotlight.next,
                 like: false,
             },{
                 title: "Duis autem vel eum iriure dolor",
                 description: "In hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim.",
                 src: "demo/gallery/newport-beach-2089906.jpg",
-                button: "Close Gallery",
-                onclick: Spotlight.close,
                 like: false
-            }/*,{
+            },{
                 media: "node",
                 control: "next,prev,close",
                 src: (function(){
@@ -331,6 +324,30 @@
                     return iframe;
                 }())
             }*/];
+
+            fetch('output.txt')
+                .then(response => response.text())
+                .then(text => {
+                    // Procesar el contenido del archivo output.txt
+                    const lines = text.split('\n');
+                    let title = "";
+                    let description = "";
+                    for (let i = 0; i < lines.length; i++) {
+                        if (lines[i].includes('title:')) {
+                            title = lines[i].split('"')[1];
+                        } else if (lines[i].includes('description:')) {
+                            description = lines[i].split('"')[1];
+                        } else if (lines[i].includes('src:')) {
+                            const src = lines[i].split('"')[1];
+                            gallery.push({
+                                title: title,
+                                description: description,
+                                src: src,
+                                like: false
+                            });
+                        }
+                    }
+                });
 
             window.showGallery = function(index){
 
