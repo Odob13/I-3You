@@ -98,7 +98,7 @@
             shootingStars.push({
                 x: Math.random() * canvas.width,
                 y: 0,
-                length: Math.random() * 300 + 300,
+                length: 20,
                 speed: Math.random() * 10 + 10,
                 alpha: 1
             });
@@ -211,11 +211,13 @@
         <div class="image" style="background-image:url(demo/gallery/newport-beach-2089906-thumb.jpg)" onclick="showGallery(3)"></div>
     </div>
     <script>
-        var img = document.querySelector('image');
-        img.addEventListener('mousemove', function(e) {
-            var x = e.clientX - img.offsetLeft;
-            var y = e.clientY - img.offsetTop;
-            img.style.transform = 'translate(' + x / 10 + 'px, ' + y / 10 + 'px)';
+        var images = document.querySelectorAll('.image');
+        images.forEach(function(img) {
+            img.addEventListener('mousemove', function(e) {
+                var x = e.clientX - img.offsetLeft;
+                var y = e.clientY - img.offsetTop;
+                img.style.transform = 'translate(' + x / 10 + 'px, ' + y / 10 + 'px)';
+            });
         });
     </script>
     <br><br>
