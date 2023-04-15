@@ -41,6 +41,10 @@ button{
     padding: 5px 10px;
 }
 
+#volume {
+    opacity: 0.5;
+}
+
 .spotlight img,
 .image{
     width: 29vw;
