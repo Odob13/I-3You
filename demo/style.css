@@ -45,6 +45,32 @@ button{
     opacity: 0.5;
 }
 
+.volume {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 200px;
+    height: 10px;
+    background-color: #ddd;
+    border-radius: 5px;
+    outline: none;
+}
+.volume::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background-color: #f00;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.volume::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background-color: #f00;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
 .spotlight img,
 .image{
     width: 29vw;

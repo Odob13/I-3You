@@ -204,7 +204,7 @@
         <label><input type="checkbox" value="scale" checked>Scale</label>
         <label><input type="checkbox" value="custom" checked>Custom</label>
     </div>
-    <input id="volume" type="range" min="0" max="1" step="0.01" value="1">
+    <input id="volume" class="volume" type="range" min="0" max="1" step="0.01" value="1">
     <br><br>
     <div>
         <div class="image" style="background-image:url(demo/gallery/Us.png)" onclick="showGallery(1)"></div>
@@ -212,7 +212,7 @@
         <div class="image" style="background-image:url(demo/gallery/newport-beach-2089906-thumb.jpg)" onclick="showGallery(3)"></div>
     </div>
     <audio id="audio" loop autoplay>
-        <source src="Music/song1.mp3" type="audio/mpeg">
+        <source src="song1.mp3" type="audio/mpeg">
     </audio>
     <script>
         window.onload = function() {
@@ -228,7 +228,7 @@
                 });
             });
 
-            var songs = ['Music/song1.mp3', 'Music/song2.mp3', 'Music/song3.mp3'];
+            var songs = ['song1.mp3', 'song2.mp3', 'song3.mp3'];
             var audio = document.getElementById('audio');
             var volume = document.getElementById('volume');
             volume.addEventListener('input', function() {
