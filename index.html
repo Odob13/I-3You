@@ -72,9 +72,8 @@
 <body>
     <br>
     <h1>
-        <img src="demo/spotlight.svg" alt="Spotlight.js: Modern HTML5 Image Gallery">
+        <img src="demo/spotlight.svg" alt="Ti amo :3">
     </h1>
-    <hr>
     <br>
     <!-- Hidden Backstore -->
     <div style="display: none">
@@ -91,7 +90,7 @@
         <label><input type="checkbox" value="page" checked>Page</label>
         <label><input type="checkbox" value="theme" checked>Theme</label>
         <label><input type="checkbox" value="fullscreen" checked>Fullscreen</label>
-        <label><input type="checkbox" value="autofit" checked>Autofit</label>
+        <label><input type="checkbox" value="autofit">Autofit</label>
         <label><input type="checkbox" value="zoom-in">Zoom +</label>
         <label><input type="checkbox" value="zoom-out">Zoom -</label><br>
         <label><input type="checkbox" value="close" checked>Close</label>
@@ -120,19 +119,10 @@
         <label><input type="checkbox" value="custom" checked>Custom</label>
     </div>
     <br><br>
-    <div class="image" style="height: auto; margin: 0 1vmin">
-        <button onclick="showGallery(1)">Show</button>
-    </div>
-    <div class="image" style="height: auto; margin: 0 1vmin">
-        <button onclick="showGallery(2)">Show</button>
-    </div>
-    <div class="image" style="height: auto; margin: 0 1vmin">
-        <button onclick="showGallery(3)">Show</button>
-    </div>
     <div>
-        <div class="image" style="background-image:url(demo/gallery/Us.png)"></div>
-        <div class="image" style="background-image:url(demo/gallery/sea-1975403-thumb.jpg)"></div>
-        <div class="image" style="background-image:url(demo/gallery/newport-beach-2089906-thumb.jpg)"></div>
+        <div class="image" style="background-image:url(demo/gallery/Us.png)" onclick="showGallery(1)"></div>
+        <div class="image" style="background-image:url(demo/gallery/sea-1975403-thumb.jpg)" onclick="showGallery(2)"></div>
+        <div class="image" style="background-image:url(demo/gallery/newport-beach-2089906-thumb.jpg)" onclick="showGallery(3)"></div>
     </div>
     <br><br>
     <script>
