@@ -134,6 +134,10 @@ button{
     background-color: #6c757d;
     color: #fff;
 }
+button.clicked {
+    transform: scale(0.9);
+    transition: transform 0.1s;
+}
 label input{
     float: left;
     margin-right: 7px;

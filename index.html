@@ -216,6 +216,7 @@
         var playButton = document.getElementById('playButton');
         var nextButton = document.getElementById('nextButton');
         var volume = document.getElementById('volume');
+        var isPlaying = false;
     
         prevButton.addEventListener('click', function() {
             currentSongIndex--;
@@ -227,7 +228,24 @@
         });
     
         playButton.addEventListener('click', function() {
-            audio.play();
+            if (isPlaying) {
+                audio.pause();
+                isPlaying = false;
+                // Cambiar el botón a un botón de reproducción
+                playButton.innerHTML = `<svg width="50" height="50" viewBox="0 0 24 24">
+                    <circle cx="12" cy="12" r="10" fill="#000000"/>
+                    <polygon points="10 8 16 12 10 16" fill="#ffffff"/>
+                </svg>`;
+            } else {
+                audio.play();
+                isPlaying = true;
+                // Cambiar el botón a un botón de pausa
+                playButton.innerHTML = `<svg width="50" height="50" viewBox="0 0 24 24">
+                    <circle cx="12" cy="12" r="10" fill="#000000"/>
+                    <rect x="9" y="8" width="3" height="8" fill="#ffffff"/>
+                    <rect x="12" y="8" width="3" height="8" fill="#ffffff"/>
+                </svg>`;
+            }
         });
     
         nextButton.addEventListener('click', function() {
@@ -241,6 +259,15 @@
     
         volume.addEventListener('input', function() {
             audio.volume = this.value;
+        });
+
+        audio.addEventListener('ended', function() {
+            currentSongIndex++;
+            if (currentSongIndex >= songs.length) {
+                currentSongIndex = 0;
+            }
+            audio.src = songs[currentSongIndex];
+            audio.play();
         });
     </script>
     <br><br>
@@ -256,7 +283,7 @@
                 img.addEventListener('mousemove', function(e) {
                     var x = e.clientX - img.offsetLeft;
                     var y = e.clientY - img.offsetTop;
-                    img.style.transform = 'translate(' + x / 10 + 'px, ' + y / 10 + 'px)';
+                    img.style.transform = 'translate(' + x / 5 + 'px, ' + y / 5 + 'px)';
                 });
                 img.addEventListener('mouseleave', function(e) {
                     img.style.transform = 'translate(0, 0)';
