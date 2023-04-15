@@ -67,8 +67,8 @@ label, button{
     display: inline-block;
     padding: 5px 7px;
     margin: 3px 1px;
-    border: 1px solid #eee6e6;
-    background: #080808;
+    border: 1px solid #0d4680;
+    background: #0d4680;
     font-size: 12px;
     line-height: 20px;
     vertical-align: middle;
@@ -97,7 +97,7 @@ pre{
     max-width: calc(100vw - 1.7em);
 }
 pre code.hljs{
-    background: #fff;
+    background: #0d4680;
     padding: 1em 1.5em;
     border-radius: 10px;
     width: 100%;
