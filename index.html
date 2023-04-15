@@ -215,21 +215,6 @@
         <source src="song1.mp3" type="audio/mpeg">
     </audio>
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            var songs = ['song1.mp3', 'song2.mp3', 'song3.mp3'];
-            var audio = document.getElementById('audio');
-            var volume = document.getElementById('volume');
-            volume.addEventListener('input', function() {
-                audio.volume = this.value;
-            });
-            audio.addEventListener('ended', function() {
-                var nextSong = songs[Math.floor(Math.random() * songs.length)];
-                audio.src = nextSong;
-                audio.play();
-            });
-        });
-    </script>
-    <script>
         window.onload = function() {
             var images = document.querySelectorAll('.image');
             images.forEach(function(img) {
@@ -391,6 +376,18 @@
             }
 
         }());
+
+        var songs = ['song1.mp3', 'song2.mp3', 'song3.mp3'];
+        var audio = document.getElementById('audio');
+        var volume = document.getElementById('volume');
+        volume.addEventListener('input', function() {
+            audio.volume = this.value;
+        });
+        audio.addEventListener('ended', function() {
+            var nextSong = songs[Math.floor(Math.random() * songs.length)];
+            audio.src = nextSong;
+            audio.play();
+        });
     </script>
 </body>
 </html>
