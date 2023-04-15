@@ -188,7 +188,61 @@
     <audio id="audio" loop>
         <source src="song1.mp3" type="audio/mpeg">
     </audio>
+    <button id="prevButton" style="background-color: transparent; border: none;">
+        <svg width="50" height="50" viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="10" fill="#000000"/>
+            <polygon points="14 8 8 12 14 16" fill="#ffffff"/>
+        </svg>
+    </button>
+    <button id="playButton" style="background-color: transparent; border: none;">
+        <svg width="50" height="50" viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="10" fill="#000000"/>
+            <polygon points="10 8 16 12 10 16" fill="#ffffff"/>
+        </svg>
+    </button>
+    <button id="nextButton" style="background-color: transparent; border: none;">
+        <svg width="50" height="50" viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="10" fill="#000000"/>
+            <polygon points="10 8 16 12 10 16" fill="#ffffff"/>
+        </svg>
+    </button>
+    <br>
     <input type="range" id="volume" class="volume" min="0" max="1" step="0.01" value="1">
+    <script>
+        var songs = ['song1.mp3', 'song2.mp3', 'song3.mp3'];
+        var currentSongIndex = 0;
+        var audio = document.getElementById('audio');
+        var prevButton = document.getElementById('prevButton');
+        var playButton = document.getElementById('playButton');
+        var nextButton = document.getElementById('nextButton');
+        var volume = document.getElementById('volume');
+    
+        prevButton.addEventListener('click', function() {
+            currentSongIndex--;
+            if (currentSongIndex < 0) {
+                currentSongIndex = songs.length - 1;
+            }
+            audio.src = songs[currentSongIndex];
+            audio.play();
+        });
+    
+        playButton.addEventListener('click', function() {
+            audio.play();
+        });
+    
+        nextButton.addEventListener('click', function() {
+            currentSongIndex++;
+            if (currentSongIndex >= songs.length) {
+                currentSongIndex = 0;
+            }
+            audio.src = songs[currentSongIndex];
+            audio.play();
+        });
+    
+        volume.addEventListener('input', function() {
+            audio.volume = this.value;
+        });
+    </script>
     <br><br>
     <div>
         <div class="image" style="background-image:url(demo/gallery/Us.png)" onclick="showGallery(1)"></div>
@@ -357,21 +411,6 @@
             }
 
         }());
-    </script>
-    <script>
-        var songs = ['song1.mp3', 'song2.mp3', 'song3.mp3'];
-        var audio = document.getElementById('audio');
-        var volume = document.getElementById('volume');
-        audio.volume = 0.5;
-        audio.play();
-        audio.addEventListener('ended', function() {
-            var nextSong = songs[Math.floor(Math.random() * songs.length)];
-            audio.src = nextSong;
-            audio.play();
-        });
-        volume.addEventListener('input', function() {
-            audio.volume = this.value;
-        });
     </script>
 </body>
 </html>
