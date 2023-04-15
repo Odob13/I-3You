@@ -133,10 +133,11 @@
     </div>
     <br>
     <input type="range" id="volume" class="volume" min="0" max="1" step="0.01" value="0.5">
-    <br>
+    <br><br>
     <div class="marquee-container">
         <div id="song-title" class="marquee"></div>
     </div>
+    <br>
     <script>
         var songs = ['Music/Golden Hour - JVKE.mp3', 'Music/Love Story (Taylor’s Version) - Taylor Swift.mp3', 'Music/Lover - Taylor Swift.mp3', 'Music/You Belong With Me (Taylor’s Version) - Taylor Swift.mp3', 'Music/Our Song - Taylor Swift.mp3', 'Music/Snow On The Beach (feat. Lana Del Rey) - Taylor Swift.mp3', 'Music/The Way I Loved You (Taylor’s Version) - Taylor Swift.mp3', 'Music/This Love (Taylor’s Version) - Taylor Swift.mp3','Music/Forever & Always (Taylor’s Version) - Taylor Swift.mp3', 'Music/The Very First Night (Taylor’s Version) (From The Vault) - Taylor Swift.mp3'];
         var currentSongIndex = 0;
@@ -154,6 +155,8 @@
         // Reemplazar caracteres no deseados con un espacio en blanco
         audioFileName = decodeURIComponent(audioFileName);
         audioFileName = audioFileName.replace(/[^a-zA-Z0-9\s]/g, ' ');
+
+        audioFileName = `${audioFileName} \u00A0\u00A0\u00A0 ${audioFileName}`;
 
         // Mostrar el nombre del archivo de audio como el título de la canción
         songTitle.textContent = audioFileName;
