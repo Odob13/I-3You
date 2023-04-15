@@ -156,7 +156,7 @@
         }
         update();
     </script>
-    <audio id="audio" loop>
+    <audio id="audio" loop autoplay>
         <source src="Music/song1.mp3" type="audio/mpeg">
     </audio>
     <script>
@@ -229,6 +229,9 @@
                 var x = e.clientX - img.offsetLeft;
                 var y = e.clientY - img.offsetTop;
                 img.style.transform = 'translate(' + x / 10 + 'px, ' + y / 10 + 'px)';
+            });
+            img.addEventListener('mouseleave', function(e) {
+                img.style.transform = 'translate(0, 0)';
             });
         });
     </script>
