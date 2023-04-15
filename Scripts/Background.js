@@ -1,5 +1,5 @@
-import * as THREE from './Scripts/three.module.js';
-import { OrbitControls } from './Scripts/OrbitControls.js';
+import * as THREE from './three.module.js';
+import { OrbitControls } from './OrbitControls.js';
 
 // Select the container for the scene
 const container = document.getElementById('container');
