@@ -61,7 +61,9 @@
     <meta name="thumbnail" content="https://nextapps-de.github.io/spotlight/demo/favicon.png">
 </head>
 <body>
-    <canvas id="canvas"></canvas>
+    <div id="container"></div>
+    <script type="module" src="Background.js"></script>
+    <!-- <canvas id="canvas"></canvas>
     <script>    
         var canvas = document.getElementById('canvas');
         var ctx = canvas.getContext('2d');
@@ -146,7 +148,7 @@
             requestAnimationFrame(update);
         }
         update();
-    </script>
+    </script> -->
     <br>
     <div class="header">
         <img src="demo/spotlight.png" alt="Imagen Central">
@@ -186,7 +188,7 @@
         <label><input type="checkbox" value="custom" checked>Custom</label>
     </div>
     <audio id="audio" loop>
-        <source src="song1.mp3" type="audio/mpeg">
+        <source src="Music/song1.mp3" type="audio/mpeg">
     </audio>
     <button id="prevButton" style="background-color: transparent; border: none;">
         <svg width="50" height="50" viewBox="0 0 24 24">
@@ -209,7 +211,7 @@
     <br>
     <input type="range" id="volume" class="volume" min="0" max="1" step="0.01" value="1">
     <script>
-        var songs = ['song1.mp3', 'song2.mp3', 'song3.mp3'];
+        var songs = ['Music/song1.mp3', 'Music/song2.mp3', 'Music/song3.mp3'];
         var currentSongIndex = 0;
         var audio = document.getElementById('audio');
         var prevButton = document.getElementById('prevButton');

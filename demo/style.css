@@ -78,6 +78,7 @@ button{
     max-width: 300px;
     margin: 1vmin 1vmin;
     content-visibility: auto;
+    transition: transform 0.2s;
 }
 .image{
     display: inline-block;
@@ -86,6 +87,7 @@ button{
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
+    transition: transform 0.2s;
 }
 .image:hover {
     transform: scale(1.1);
@@ -133,10 +135,10 @@ button{
     font-size: 15px;
     background-color: #6c757d;
     color: #fff;
+    transition: transform 0.2s;
 }
-button.clicked {
+button:active {
     transform: scale(0.9);
-    transition: transform 0.1s;
 }
 label input{
     float: left;
