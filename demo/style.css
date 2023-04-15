@@ -35,6 +35,19 @@ html, body{
     height: 100%;
     z-index: -1;
 }
+.marquee {
+    position: relative;
+    animation: marquee 10s linear infinite;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(100%) rotate(0deg);
+    }
+    100% {
+        transform: translateX(-100%) rotate(360deg);
+    }
+}
 #content {
     position: absolute;
     top: 0;
@@ -53,7 +66,12 @@ main{
     max-width: 800px;
     margin: auto;
 }
-a, b{
+a {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+b{
     display: inline-block;
     color: #6c757d;
     text-decoration: none;

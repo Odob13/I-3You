@@ -114,7 +114,7 @@
 },
 {
     title: "Amo quererte",
-    description: Amo tenerte",
+    description: "Amo tenerte",
     src: "demo/gallery/IMG-20230415-WA0019.jpg",
     like: false
 },

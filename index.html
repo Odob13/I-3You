@@ -54,6 +54,7 @@
             transition: clip-path 0.65s ease 0.15s;
         }
     </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="demo/style.css">
     <meta name="format-detection" content="telephone=no">
     <meta name="description" content="Una pagina pa mi amorsito">
@@ -63,6 +64,11 @@
 <body>
     <div id="overlay"></div>
     <div id="container"></div>
+    <a href="https://open.spotify.com/playlist/77ImE0tHuyqOOVD9YibogP?si=7fcd01a7a8af4200" target="_blank">
+        <button style="background-color: transparent; border: none;">
+            <i class="fab fa-spotify"></i>
+        </button>
+    </a>
     <br>
     <div class="header">
         <img src="demo/spotlight.png" alt="Imagen Central">
@@ -101,7 +107,7 @@
         <label><input type="checkbox" value="custom" checked>Custom</label>
     </div>
     <audio id="audio">
-        <source src="Music/song1.mp3" type="audio/mpeg">
+        <source src="Music/Golden Hour - JVKE.mp3" type="audio/mpeg">
     </audio>
     <button id="prevButton" style="background-color: transparent; border: none;">
         <svg width="50" height="50" viewBox="0 0 24 24">
@@ -127,8 +133,10 @@
     </div>
     <br>
     <input type="range" id="volume" class="volume" min="0" max="1" step="0.01" value="0.5">
+    <br>
+    <div id="song-title" class="marquee"></div>
     <script>
-        var songs = ['Music/song1.mp3', 'Music/song2.mp3', 'Music/song3.mp3'];
+        var songs = ['Music/Golden Hour - JVKE.mp3', 'Music/Love Story (Taylor’s Version) - Taylor Swift.mp3', 'Music/Lover - Taylor Swift.mp3', 'Music/You Belong With Me (Taylor’s Version) - Taylor Swift.mp3', 'Music/Our Song - Taylor Swift.mp3', 'Music/Snow On The Beach (feat. Lana Del Rey) - Taylor Swift.mp3', 'Music/The Way I Loved You (Taylor’s Version) - Taylor Swift.mp3', 'Music/This Love (Taylor’s Version) - Taylor Swift.mp3','Music/Forever & Always (Taylor’s Version) - Taylor Swift.mp3', 'Music/The Very First Night (Taylor’s Version) (From The Vault) - Taylor Swift.mp3'];
         var currentSongIndex = 0;
         var audio = document.getElementById('audio');
         var prevButton = document.getElementById('prevButton');
@@ -136,6 +144,11 @@
         var nextButton = document.getElementById('nextButton');
         var volume = document.getElementById('volume');
         var isPlaying = false;
+        const songTitle = document.querySelector('#song-title');
+        const audioSrc = audio.querySelector('source').src;
+        const audioFileName = audioSrc.substring(audioSrc.lastIndexOf('/') + 1);
+
+        songTitle.textContent = audioFileName;
     
         prevButton.addEventListener('click', function() {
             currentSongIndex--;
@@ -180,6 +193,14 @@
             const x = volume.value;
             const volumeValue = Math.pow(x, 2);
             audio.volume = volumeValue;
+        });
+
+        audio.addEventListener('play', () => {
+            songTitle.classList.add('marquee');
+        });
+
+        audio.addEventListener('pause', () => {
+            songTitle.classList.remove('marquee');
         });
 
         audio.addEventListener('ended', function() {
