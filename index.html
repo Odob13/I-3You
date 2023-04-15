@@ -162,6 +162,9 @@
             if (currentSongIndex < 0) {
                 currentSongIndex = songs.length - 1;
             }
+            var x = volume.value;
+            var volumeValue = Math.pow(x, 2);
+            audio.volume = volumeValue;
             audio.src = songs[currentSongIndex];
             audio.play();
             // Obtener el nombre del archivo de audio
@@ -177,6 +180,9 @@
         });
     
         playButton.addEventListener('click', function() {
+            var x = volume.value;
+            var volumeValue = Math.pow(x, 2);
+            audio.volume = volumeValue;
             if (isPlaying) {
                 audio.pause();
                 isPlaying = false;
@@ -202,6 +208,9 @@
             if (currentSongIndex >= songs.length) {
                 currentSongIndex = 0;
             }
+            var x = volume.value;
+            var volumeValue = Math.pow(x, 2);
+            audio.volume = volumeValue;
             audio.src = songs[currentSongIndex];
             audio.play();
             // Obtener el nombre del archivo de audio
@@ -217,8 +226,8 @@
         });
     
         volume.addEventListener('input', function() {
-            const x = volume.value;
-            const volumeValue = Math.pow(x, 2);
+            var x = volume.value;
+            var volumeValue = Math.pow(x, 2);
             audio.volume = volumeValue;
         });
 
