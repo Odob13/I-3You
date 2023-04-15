@@ -176,8 +176,8 @@
         });
     
         volume.addEventListener('input', function() {
-            const x = volume.value;
-            const volumeValue = 20 * Math.log10(x + 0.001);
+            var x = volume.value;
+            var volumeValue = 20 * Math.log10(x + 0.001);
             audio.volume = volumeValue;
         });
 
