@@ -70,6 +70,9 @@
     <link rel="icon" sizes="512x512 1024x1024" type="image/png" href="https://nextapps-de.github.io/spotlight/demo/og-image.png">
 </head>
 <body>
+    <audio id="audio" loop autoplay>
+        <source src="Music/song1.mp3" type="audio/mpeg">
+    </audio>
     <canvas id="canvas"></canvas>
     <script>    
         var canvas = document.getElementById('canvas');
@@ -98,7 +101,7 @@
             shootingStars.push({
                 x: Math.random() * canvas.width,
                 y: 0,
-                length: 20,
+                length: 8,
                 speed: Math.random() * 10 + 10,
                 alpha: 1
             });
@@ -156,18 +159,6 @@
         }
         update();
     </script>
-    <audio id="audio" loop autoplay>
-        <source src="Music/song1.mp3" type="audio/mpeg">
-    </audio>
-    <script>
-        var songs = ['Music/song1.mp3', 'Music/song2.mp3', 'Music/song3.mp3'];
-        var audio = document.getElementById('audio');
-        audio.addEventListener('ended', function() {
-            var nextSong = songs[Math.floor(Math.random() * songs.length)];
-            audio.src = nextSong;
-            audio.play();
-        });
-    </script>
     <br>
     <div class="header">
         <img src="demo/spotlight.png" alt="Imagen Central">
@@ -223,17 +214,27 @@
         <div class="image" style="background-image:url(demo/gallery/newport-beach-2089906-thumb.jpg)" onclick="showGallery(3)"></div>
     </div>
     <script>
-        var images = document.querySelectorAll('.image');
-        images.forEach(function(img) {
-            img.addEventListener('mousemove', function(e) {
-                var x = e.clientX - img.offsetLeft;
-                var y = e.clientY - img.offsetTop;
-                img.style.transform = 'translate(' + x / 10 + 'px, ' + y / 10 + 'px)';
+        window.onload = function() {
+            var images = document.querySelectorAll('.image');
+            images.forEach(function(img) {
+                img.addEventListener('mousemove', function(e) {
+                    var x = e.clientX - img.offsetLeft;
+                    var y = e.clientY - img.offsetTop;
+                    img.style.transform = 'translate(' + x / 10 + 'px, ' + y / 10 + 'px)';
+                });
+                img.addEventListener('mouseleave', function(e) {
+                    img.style.transform = 'translate(0, 0)';
+                });
             });
-            img.addEventListener('mouseleave', function(e) {
-                img.style.transform = 'translate(0, 0)';
+
+            var songs = ['Music/song1.mp3', 'Music/song2.mp3', 'Music/song3.mp3'];
+            var audio = document.getElementById('audio');
+            audio.addEventListener('ended', function() {
+                var nextSong = songs[Math.floor(Math.random() * songs.length)];
+                audio.src = nextSong;
+                audio.play();
             });
-        });
+        }
     </script>
     <br><br>
     <script>
