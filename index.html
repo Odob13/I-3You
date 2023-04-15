@@ -62,8 +62,7 @@
 </head>
 <body>
     <div id="container"></div>
-    <script src="three.min.js"></script>
-    <script type="module" src="Background.js"></script>
+    <script type="module" src="script.js"></script>
     <!-- <canvas id="canvas"></canvas>
     <script>    
         var canvas = document.getElementById('canvas');
@@ -150,136 +149,134 @@
         }
         update();
     </script> -->
-    <div id="content">
-        <br>
-        <div class="header">
-            <img src="demo/spotlight.png" alt="Imagen Central">
-        </div>
-        <br>
-        <hr>
-        <div style="display: none" id="control">
-            <label><input type="checkbox" value="page" checked>Page</label>
-            <label><input type="checkbox" value="theme" checked>Theme</label>
-            <label><input type="checkbox" value="fullscreen" checked>Fullscreen</label>
-            <label><input type="checkbox" value="autofit">Autofit</label>
-            <label><input type="checkbox" value="zoom-in">Zoom +</label>
-            <label><input type="checkbox" value="zoom-out">Zoom -</label><br>
-            <label><input type="checkbox" value="close" checked>Close</label>
-            <label><input type="checkbox" value="download" checked>Download</label>
-            <label><input type="checkbox" value="play" checked>Play</label>
-            <label><input type="checkbox" value="prev" checked>Page Prev</label>
-            <label><input type="checkbox" value="next" checked>Page Next</label>
-        </div>
-        <div style="display: none" id="modifier">
-            <label><input type="checkbox" value="autoplay" checked>Autoplay</label>
-            <label><input type="checkbox" value="infinite" checked>Infinite Slide</label>
-            <label><input type="checkbox" value="spinner" checked>Spinner</label>
-            <label><input type="checkbox" value="preload" checked>Preload Next</label><br>
-            <label><input type="radio" name="autohide" value="false" checked>Autohide: Off</label>
-            <label><input type="radio" name="autohide" value="true" checked>Autohide: Controls</label>
-            <label><input type="radio" name="autohide" value="all">Autohide: All</label><br>
-            <label><input type="radio" name="fit" value="cover" checked>Autofit: Cover</label>
-            <label><input type="radio" name="fit" value="contain">Autofit: Contain</label><br>
-            <label><input type="radio" name="theme" value="" checked>Theme: default</label>
-            <label><input type="radio" name="theme" value="white">Theme: white</label>
-        </div>
-        <div style="display: none" id="animation">
-            <label><input type="checkbox" value="slide" checked>Slide</label>
-            <label><input type="checkbox" value="fade" checked>Fade</label>
-            <label><input type="checkbox" value="scale" checked>Scale</label>
-            <label><input type="checkbox" value="custom" checked>Custom</label>
-        </div>
-        <audio id="audio" loop>
-            <source src="Music/song1.mp3" type="audio/mpeg">
-        </audio>
-        <button id="prevButton" style="background-color: transparent; border: none;">
-            <svg width="50" height="50" viewBox="0 0 24 24">
-                <circle cx="12" cy="12" r="10" fill="#000000"/>
-                <polygon points="14 8 8 12 14 16" fill="#ffffff"/>
-            </svg>
-        </button>
-        <button id="playButton" style="background-color: transparent; border: none;">
-            <svg width="50" height="50" viewBox="0 0 24 24">
-                <circle cx="12" cy="12" r="10" fill="#000000"/>
-                <polygon points="10 8 16 12 10 16" fill="#ffffff"/>
-            </svg>
-        </button>
-        <button id="nextButton" style="background-color: transparent; border: none;">
-            <svg width="50" height="50" viewBox="0 0 24 24">
-                <circle cx="12" cy="12" r="10" fill="#000000"/>
-                <polygon points="10 8 16 12 10 16" fill="#ffffff"/>
-            </svg>
-        </button>
-        <br>
-        <input type="range" id="volume" class="volume" min="0" max="1" step="0.01" value="1">
-        <script>
-            var songs = ['Music/song1.mp3', 'Music/song2.mp3', 'Music/song3.mp3'];
-            var currentSongIndex = 0;
-            var audio = document.getElementById('audio');
-            var prevButton = document.getElementById('prevButton');
-            var playButton = document.getElementById('playButton');
-            var nextButton = document.getElementById('nextButton');
-            var volume = document.getElementById('volume');
-            var isPlaying = false;
-        
-            prevButton.addEventListener('click', function() {
-                currentSongIndex--;
-                if (currentSongIndex < 0) {
-                    currentSongIndex = songs.length - 1;
-                }
-                audio.src = songs[currentSongIndex];
+    <br>
+    <div class="header">
+        <img src="demo/spotlight.png" alt="Imagen Central">
+    </div>
+    <br>
+    <hr>
+    <div style="display: none" id="control">
+        <label><input type="checkbox" value="page" checked>Page</label>
+        <label><input type="checkbox" value="theme" checked>Theme</label>
+        <label><input type="checkbox" value="fullscreen" checked>Fullscreen</label>
+        <label><input type="checkbox" value="autofit">Autofit</label>
+        <label><input type="checkbox" value="zoom-in">Zoom +</label>
+        <label><input type="checkbox" value="zoom-out">Zoom -</label><br>
+        <label><input type="checkbox" value="close" checked>Close</label>
+        <label><input type="checkbox" value="download" checked>Download</label>
+        <label><input type="checkbox" value="play" checked>Play</label>
+        <label><input type="checkbox" value="prev" checked>Page Prev</label>
+        <label><input type="checkbox" value="next" checked>Page Next</label>
+    </div>
+    <div style="display: none" id="modifier">
+        <label><input type="checkbox" value="autoplay" checked>Autoplay</label>
+        <label><input type="checkbox" value="infinite" checked>Infinite Slide</label>
+        <label><input type="checkbox" value="spinner" checked>Spinner</label>
+        <label><input type="checkbox" value="preload" checked>Preload Next</label><br>
+        <label><input type="radio" name="autohide" value="false" checked>Autohide: Off</label>
+        <label><input type="radio" name="autohide" value="true" checked>Autohide: Controls</label>
+        <label><input type="radio" name="autohide" value="all">Autohide: All</label><br>
+        <label><input type="radio" name="fit" value="cover" checked>Autofit: Cover</label>
+        <label><input type="radio" name="fit" value="contain">Autofit: Contain</label><br>
+        <label><input type="radio" name="theme" value="" checked>Theme: default</label>
+        <label><input type="radio" name="theme" value="white">Theme: white</label>
+    </div>
+    <div style="display: none" id="animation">
+        <label><input type="checkbox" value="slide" checked>Slide</label>
+        <label><input type="checkbox" value="fade" checked>Fade</label>
+        <label><input type="checkbox" value="scale" checked>Scale</label>
+        <label><input type="checkbox" value="custom" checked>Custom</label>
+    </div>
+    <audio id="audio" loop>
+        <source src="Music/song1.mp3" type="audio/mpeg">
+    </audio>
+    <button id="prevButton" style="background-color: transparent; border: none;">
+        <svg width="50" height="50" viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="10" fill="#000000"/>
+            <polygon points="14 8 8 12 14 16" fill="#ffffff"/>
+        </svg>
+    </button>
+    <button id="playButton" style="background-color: transparent; border: none;">
+        <svg width="50" height="50" viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="10" fill="#000000"/>
+            <polygon points="10 8 16 12 10 16" fill="#ffffff"/>
+        </svg>
+    </button>
+    <button id="nextButton" style="background-color: transparent; border: none;">
+        <svg width="50" height="50" viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="10" fill="#000000"/>
+            <polygon points="10 8 16 12 10 16" fill="#ffffff"/>
+        </svg>
+    </button>
+    <br>
+    <input type="range" id="volume" class="volume" min="0" max="1" step="0.01" value="1">
+    <script>
+        var songs = ['Music/song1.mp3', 'Music/song2.mp3', 'Music/song3.mp3'];
+        var currentSongIndex = 0;
+        var audio = document.getElementById('audio');
+        var prevButton = document.getElementById('prevButton');
+        var playButton = document.getElementById('playButton');
+        var nextButton = document.getElementById('nextButton');
+        var volume = document.getElementById('volume');
+        var isPlaying = false;
+    
+        prevButton.addEventListener('click', function() {
+            currentSongIndex--;
+            if (currentSongIndex < 0) {
+                currentSongIndex = songs.length - 1;
+            }
+            audio.src = songs[currentSongIndex];
+            audio.play();
+        });
+    
+        playButton.addEventListener('click', function() {
+            if (isPlaying) {
+                audio.pause();
+                isPlaying = false;
+                // Cambiar el botón a un botón de reproducción
+                playButton.innerHTML = `<svg width="50" height="50" viewBox="0 0 24 24">
+                    <circle cx="12" cy="12" r="10" fill="#000000"/>
+                    <polygon points="10 8 16 12 10 16" fill="#ffffff"/>
+                </svg>`;
+            } else {
                 audio.play();
-            });
-        
-            playButton.addEventListener('click', function() {
-                if (isPlaying) {
-                    audio.pause();
-                    isPlaying = false;
-                    // Cambiar el botón a un botón de reproducción
-                    playButton.innerHTML = `<svg width="50" height="50" viewBox="0 0 24 24">
-                        <circle cx="12" cy="12" r="10" fill="#000000"/>
-                        <polygon points="10 8 16 12 10 16" fill="#ffffff"/>
-                    </svg>`;
-                } else {
-                    audio.play();
-                    isPlaying = true;
-                    // Cambiar el botón a un botón de pausa
-                    playButton.innerHTML = `<svg width="50" height="50" viewBox="0 0 24 24">
-                        <circle cx="12" cy="12" r="10" fill="#000000"/>
-                        <rect x="9" y="8" width="3" height="8" fill="#ffffff"/>
-                        <rect x="12" y="8" width="3" height="8" fill="#ffffff"/>
-                    </svg>`;
-                }
-            });
-        
-            nextButton.addEventListener('click', function() {
-                currentSongIndex++;
-                if (currentSongIndex >= songs.length) {
-                    currentSongIndex = 0;
-                }
-                audio.src = songs[currentSongIndex];
-                audio.play();
-            });
-        
-            volume.addEventListener('input', function() {
-                audio.volume = this.value;
-            });
+                isPlaying = true;
+                // Cambiar el botón a un botón de pausa
+                playButton.innerHTML = `<svg width="50" height="50" viewBox="0 0 24 24">
+                    <circle cx="12" cy="12" r="10" fill="#000000"/>
+                    <rect x="9" y="8" width="3" height="8" fill="#ffffff"/>
+                    <rect x="12" y="8" width="3" height="8" fill="#ffffff"/>
+                </svg>`;
+            }
+        });
+    
+        nextButton.addEventListener('click', function() {
+            currentSongIndex++;
+            if (currentSongIndex >= songs.length) {
+                currentSongIndex = 0;
+            }
+            audio.src = songs[currentSongIndex];
+            audio.play();
+        });
+    
+        volume.addEventListener('input', function() {
+            audio.volume = this.value;
+        });
 
-            audio.addEventListener('ended', function() {
-                currentSongIndex++;
-                if (currentSongIndex >= songs.length) {
-                    currentSongIndex = 0;
-                }
-                audio.src = songs[currentSongIndex];
-                audio.play();
-            });
-        </script>
-        <br><br>
-        <div>
-            <div class="image" style="background-image:url(demo/gallery/Us.png)" onclick="showGallery(1)"></div>
-            <div class="image" style="background-image:url(demo/gallery/sea-1975403-thumb.jpg)" onclick="showGallery(2)"></div>
-            <div class="image" style="background-image:url(demo/gallery/newport-beach-2089906-thumb.jpg)" onclick="showGallery(3)"></div>
-        </div>
+        audio.addEventListener('ended', function() {
+            currentSongIndex++;
+            if (currentSongIndex >= songs.length) {
+                currentSongIndex = 0;
+            }
+            audio.src = songs[currentSongIndex];
+            audio.play();
+        });
+    </script>
+    <br><br>
+    <div>
+        <div class="image" style="background-image:url(demo/gallery/Us.png)" onclick="showGallery(1)"></div>
+        <div class="image" style="background-image:url(demo/gallery/sea-1975403-thumb.jpg)" onclick="showGallery(2)"></div>
+        <div class="image" style="background-image:url(demo/gallery/newport-beach-2089906-thumb.jpg)" onclick="showGallery(3)"></div>
     </div>
     <script>
         window.onload = function() {
@@ -443,38 +440,6 @@
             }
 
         }());
-    </script>
-    <script src="three.min.js"></script>
-    <script>
-        // Aquí va el código de Three.js para crear la esfera
-        var scene = new THREE.Scene();
-        var camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-        var renderer = new THREE.WebGLRenderer();
-        renderer.setSize(window.innerWidth, window.innerHeight);
-        document.body.appendChild(renderer.domElement);
-
-        var geometry = new THREE.SphereGeometry(1, 32, 32);
-        geometry.scale(-1, 1, 1); // Invertir la esfera
-        var material = new THREE.MeshBasicMaterial({
-            map: new THREE.TextureLoader().load('demo/Background.jpg')
-        });
-        var sphere = new THREE.Mesh(geometry, material);
-        scene.add(sphere);
-
-        function render() {
-            requestAnimationFrame(render);
-            renderer.render(scene, camera);
-        }
-        render();
-
-        renderer.domElement.addEventListener('mousemove', function(e) {
-            var x = (e.clientX / window.innerWidth) * 2 - 1;
-            var y = -(e.clientY / window.innerHeight) * 2 + 1;
-            camera.rotation.y = x;
-            camera.rotation.x = y;
-        });
-        var container = document.getElementById('container');
-        container.appendChild(renderer.domElement);
     </script>
 </body>
 </html>
