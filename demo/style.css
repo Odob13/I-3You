@@ -40,17 +40,20 @@ html, body{
 }
 
 .marquee {
-    display: inline-block;
-    white-space: nowrap;
+    display: flex;
     animation: marquee 10s linear infinite;
+}
+
+.marquee-content {
+    white-space: nowrap;
 }
 
 @keyframes marquee {
     0% {
-        transform: translateX(100%);
+        transform: translateX(0);
     }
     100% {
-        transform: translateX(-100%);
+        transform: translateX(-50%);
     }
 }
 #content {
