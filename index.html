@@ -71,6 +71,57 @@
 </head>
 <body>
     <canvas id="canvas"></canvas>
+    <script>    
+        var canvas = document.getElementById('canvas');
+        var ctx = canvas.getContext('2d');
+
+        function resize() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+        window.addEventListener('resize', resize);
+        resize();
+
+        var stars = [];
+        for (var i = 0; i < 1000; i++) {
+            stars.push({
+                x: Math.random() * canvas.width,
+                y: Math.random() * canvas.height,
+                radius: Math.sqrt(Math.random() * 2),
+                alpha: Math.random(),
+                decreasing: true
+            });
+        }
+
+        function update() {
+            ctx.fillStyle = "#000";
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            for (var i = 0; i < stars.length; i++) {
+                var star = stars[i];
+                ctx.beginPath();
+                ctx.arc(star.x, star.y, star.radius, 0, 2 * Math.PI);
+                ctx.closePath();
+                ctx.fillStyle = "rgba(255, 255, 255, " + star.alpha + ")";
+                ctx.fill();
+
+                if (star.decreasing) {
+                    star.alpha -= 0.005;
+                    if (star.alpha < 0.2) {
+                        star.decreasing = false;
+                    }
+                } else {
+                    star.alpha += 0.005;
+                    if (star.alpha > 0.9) {
+                        star.decreasing = true;
+                    }
+                }
+            }
+
+            requestAnimationFrame(update);
+        }
+        update();
+    </script>
     <br>
     <div class="header">
         <img src="demo/spotlight.png" alt="Imagen Central">
@@ -272,57 +323,6 @@
             }
 
         }());
-
-        var canvas = document.getElementById('canvas');
-        var ctx = canvas.getContext('2d');
-
-        function resize() {
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
-        }
-        window.addEventListener('resize', resize);
-        resize();
-
-        var stars = [];
-        for (var i = 0; i < 1000; i++) {
-            stars.push({
-                x: Math.random() * canvas.width,
-                y: Math.random() * canvas.height,
-                radius: Math.sqrt(Math.random() * 2),
-                alpha: Math.random(),
-                decreasing: true
-            });
-        }
-
-        function update() {
-            ctx.fillStyle = "#000";
-            ctx.fillRect(0, 0, canvas.width, canvas.height);
-
-            for (var i = 0; i < stars.length; i++) {
-                var star = stars[i];
-                ctx.beginPath();
-                ctx.arc(star.x, star.y, star.radius, 0, 2 * Math.PI);
-                ctx.closePath();
-                ctx.fillStyle = "rgba(255, 255, 255, " + star.alpha + ")";
-                ctx.fill();
-
-                if (star.decreasing) {
-                    star.alpha -= 0.005;
-                    if (star.alpha < 0.2) {
-                        star.decreasing = false;
-                    }
-                } else {
-                    star.alpha += 0.005;
-                    if (star.alpha > 0.9) {
-                        star.decreasing = true;
-                    }
-                }
-            }
-
-            requestAnimationFrame(update);
-        }
-        update();
-
     </script>
 </body>
 </html>
