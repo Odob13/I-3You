@@ -70,18 +70,6 @@
     <link rel="icon" sizes="512x512 1024x1024" type="image/png" href="https://nextapps-de.github.io/spotlight/demo/og-image.png">
 </head>
 <body>
-    <audio id="audio" loop>
-        <source src="song1.mp3" type="audio/mpeg">
-    </audio>
-    <script>
-        var songs = ['song1.mp3', 'song2.mp3', 'song3.mp3'];
-        var audio = document.getElementById('audio');
-        audio.addEventListener('ended', function() {
-            var nextSong = songs[Math.floor(Math.random() * songs.length)];
-            audio.src = nextSong;
-            audio.play();
-        });
-    </script>
     <canvas id="canvas"></canvas>
     <script>    
         var canvas = document.getElementById('canvas');
@@ -216,8 +204,26 @@
         <label><input type="checkbox" value="scale" checked>Scale</label>
         <label><input type="checkbox" value="custom" checked>Custom</label>
     </div>
+        <audio id="audio" loop muted>
+        <source src="song1.mp3" type="audio/mpeg">
+    </audio>
+    <script>
+        var songs = ['song1.mp3', 'song2.mp3', 'song3.mp3'];
+        var audio = document.getElementById('audio');
+        audio.volume = 0.5;
+        audio.play();
+        document.addEventListener('click', function() {
+            audio.muted = false;
+        });
+        audio.addEventListener('ended', function() {
+            var nextSong = songs[Math.floor(Math.random() * songs.length)];
+            audio.src = nextSong;
+            audio.play();
+        });
+    </script>
     <input type="range" id="volume" class="volume" min="0" max="1" step="0.01" value="1">
     <script>
+        var audio = document.getElementById('audio');
         var volume = document.getElementById('volume');
         volume.addEventListener('input', function() {
             audio.volume = this.value;
