@@ -252,6 +252,16 @@
             audio.volume = volumeValue;
             audio.src = songs[currentSongIndex];
             audio.play();
+            // Obtener el nombre del archivo de audio
+            var audioSrc = audio.src;
+            var audioFileName = audioSrc.substring(audioSrc.lastIndexOf('/') + 1);
+
+            // Reemplazar caracteres no deseados con un espacio en blanco
+            audioFileName = decodeURIComponent(audioFileName);
+            audioFileName = audioFileName.replace('.mp3', '');
+
+            // Mostrar el nombre del archivo de audio como el título de la canción
+            songTitle.textContent = audioFileName;
         });
     </script>
     <br><br>
