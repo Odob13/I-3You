@@ -63,26 +63,6 @@
 </head>
 <body>
     <div id="overlay"></div>
-    <iframe id="dateFrame">
-        <form id="dateForm">
-            <label for="date">Ingresa la fecha:</label><br>
-            <input type="date" id="date" name="date"><br><br>
-            <input type="button" value="Entrar" onclick="checkDate()">
-        </form>
-    </iframe>
-    <script>
-        // Función para verificar si la fecha es correcta
-        function checkDate() {
-            var date = document.getElementById('date').value;
-            if (date === '2023-04-19') {
-                // La fecha es correcta, ocultar el iframe
-                document.getElementById('dateFrame').style.display = 'none';
-            } else {
-                // La fecha no es correcta, mostrar un mensaje de error
-                alert('Fecha incorrecta. Inténtalo de nuevo.');
-            }
-        }
-    </script>
     <div id="container"></div>
     <a href="https://open.spotify.com/playlist/77ImE0tHuyqOOVD9YibogP?si=7fcd01a7a8af4200" target="_blank">
         <button style="background-color: transparent; border: none;">
@@ -452,6 +432,26 @@
         window.addEventListener('load', () => {
             document.querySelector('#overlay').style.display = 'none';
         });
+    </script>
+    <iframe id="dateFrame">
+        <form id="dateForm">
+            <label for="date">Ingresa la fecha:</label><br>
+            <input type="date" id="date" name="date"><br><br>
+            <input type="button" value="Entrar" onclick="checkDate()">
+        </form>
+    </iframe>
+    <script>
+        // Función para verificar si la fecha es correcta
+        function checkDate() {
+            var date = document.getElementById('date').value;
+            if (date === '2023-04-19') {
+                // La fecha es correcta, ocultar el iframe
+                document.getElementById('dateFrame').style.display = 'none';
+            } else {
+                // La fecha no es correcta, mostrar un mensaje de error
+                alert('Fecha incorrecta. Inténtalo de nuevo.');
+            }
+        }
     </script>
 </body>
 </html>
