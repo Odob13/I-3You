@@ -1,3 +1,3 @@
 function downloadFile() {
-    window.location.href = '/apk/NotitasDiariasParaMiamor.apk';
+    window.location.href = 'apk/NotitasDiariasParaMiamor.apk';
 }
