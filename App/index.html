@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>NotitasDiariasMiamor</title>
+  </head>
+  <body style="text-align: center">
+    <canvas id="unity-canvas" width=1280 height=720 style="width: 1280px; height: 720px; background: #231F20"></canvas>
+    <script src="App/Build/App.loader.js"></script>
+    <script>
+      var buildUrl = "App/Build";
+      createUnityInstance(document.querySelector("#unity-canvas"), {
+        dataUrl: buildUrl +"/App.data.br",
+        frameworkUrl: buildUrl +"/App.framework.js.br",
+        codeUrl: buildUrl +"/App.wasm.br",
+        streamingAssetsUrl: "StreamingAssets",
+        companyName: "OdobGames",
+        productName: "NotitasDiariasMiamor",
+        productVersion: "1.0.2",
+        // matchWebGLToCanvasSize: false, // Uncomment this to separately control WebGL canvas render size and DOM element size.
+        // devicePixelRatio: 1, // Uncomment this to override low DPI rendering on high DPI displays.
+      });
+    </script>
+  </body>
+</html>
