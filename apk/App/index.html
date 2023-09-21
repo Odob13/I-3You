@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Unity WebGL Player | NotitasDiariasMiamor</title>
+    <title>NotitasDiariasMiamor</title>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
   </head>
@@ -20,13 +20,12 @@
         WebGL builds are not supported on mobile devices.
       </div>
       <div id="unity-footer">
-        <div id="unity-webgl-logo"></div>
         <div id="unity-fullscreen-button"></div>
         <div id="unity-build-title">NotitasDiariasMiamor</div>
       </div>
     </div>
     <script>
-      var buildUrl = "Build";
+      var buildUrl = "apk/App/Build";
       var loaderUrl = buildUrl + "/App.loader.js";
       var config = {
         dataUrl: buildUrl + "/App.data.br",
@@ -74,6 +73,7 @@
           progressBarFull.style.width = 100 * progress + "%";
         }).then((unityInstance) => {
           loadingBar.style.display = "none";
+          unityInstance.SetFullscreen(1); 
           fullscreenButton.onclick = () => {
             unityInstance.SetFullscreen(1);
           };
