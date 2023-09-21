@@ -17,7 +17,6 @@
       </div>
       <div id="unity-footer">
         <div id="unity-fullscreen-button"></div>
-        <div id="unity-build-title">NotitasDiariasMiamor</div>
       </div>
     </div>
     <script>
@@ -59,7 +58,6 @@
           progressBarFull.style.width = 100 * progress + "%";
         }).then((unityInstance) => {
           loadingBar.style.display = "none";
-          unityInstance.SetFullscreen(1); 
           fullscreenButton.onclick = () => {
             unityInstance.SetFullscreen(1);
           };
