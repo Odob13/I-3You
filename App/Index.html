@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Unity WebGL Player | NotitasDiariasMiamor</title>
-    <link rel="shortcut icon" href="TemplateData/favicon.ico">
+    <title>NotitasDiariasMiamor</title>
+    <link rel="shortcut icon" href="demo/heart.png">
     <link rel="stylesheet" href="TemplateData/style.css">
   </head>
   <body>
@@ -20,7 +20,6 @@
         WebGL builds are not supported on mobile devices.
       </div>
       <div id="unity-footer">
-        <div id="unity-webgl-logo"></div>
         <div id="unity-fullscreen-button"></div>
         <div id="unity-build-title">NotitasDiariasMiamor</div>
       </div>
@@ -74,7 +73,6 @@
           progressBarFull.style.width = 100 * progress + "%";
         }).then((unityInstance) => {
           loadingBar.style.display = "none";
-          unityInstance.SetFullscreen(1);
           fullscreenButton.onclick = () => {
             unityInstance.SetFullscreen(1);
           };
